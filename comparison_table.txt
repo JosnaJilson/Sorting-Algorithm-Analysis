@@ -1,0 +1,40 @@
+COMPARISON TABLE
+================
+
+Criteria              Merge Sort              Quick Sort
+------------------------------------------------------------
+Input                  324 125 456 218         324 125 456 218
+                       102 389 275 147         102 389 275 147
+
+Passes / Partitions    3 passes                6 partitions
+
+Comparisons             17                      27
+                        (program count)         (program count)
+
+Best Case Time          O(n log n)              O(n log n)
+
+Average Case Time       O(n log n)              O(n log n)
+
+Worst Case Time         O(n log n)              O(n^2)
+
+Additional Space        O(n)                    O(log n) average
+                                                 O(n) worst
+
+Stability               Stable                  Not stable
+
+Final Sorted Output     102 125 147 218        102 125 147 218
+                        275 324 389 456        275 324 389 456
+
+
+CONCLUSION
+==========
+
+Merge Sort has predictable O(n log n) worst-case time complexity
+and requires O(n) additional space.
+
+Quick Sort generally requires less auxiliary array space, but
+its worst-case time complexity can become O(n^2) depending on
+pivot selection.
+
+For large datasets where predictable worst-case performance is
+important, Merge Sort can be justified as the suitable approach.

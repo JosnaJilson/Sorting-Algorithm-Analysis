@@ -1,0 +1,81 @@
+COMPLEXITY ANALYSIS
+
+Input size, n = 8
+
+
+================ MERGE SORT ================
+
+Number of passes = 3
+
+Number of comparisons recorded = 17
+
+Time Complexity:
+Best Case    : O(n log n)
+Average Case : O(n log n)
+Worst Case   : O(n log n)
+
+Additional Space:
+O(n)
+
+Reason:
+Merge Sort divides the array into smaller parts and merges
+the sorted parts. The merging operation requires an additional
+temporary array. The implementation used here is iterative,
+so there is no recursive stack.
+
+
+================ QUICK SORT ================
+
+Pivot Selection:
+First element is selected as the pivot.
+
+Number of partitions = 6
+
+Number of comparisons recorded by the program = 27
+
+Time Complexity:
+Best Case    : O(n log n)
+Average Case : O(n log n)
+Worst Case   : O(n^2)
+
+Additional Space:
+Average Case : O(log n) for recursion stack
+Worst Case   : O(n) for recursion stack
+
+Reason:
+Quick Sort partitions the array around a pivot. Its performance
+depends on the choice of pivot. A balanced partition gives
+O(n log n), while highly unbalanced partitions can give O(n^2).
+
+
+================ COMPARISON ================
+
+Merge Sort:
+Passes = 3
+Comparisons = 17
+Worst-case time = O(n log n)
+Additional space = O(n)
+
+Quick Sort:
+Partitions = 6
+Comparisons = 27
+Worst-case time = O(n^2)
+Additional space = O(log n) average, O(n) worst case
+
+
+================ CONCLUSION ================
+
+For the given input, both Merge Sort and Quick Sort produce
+the same sorted sequence:
+
+102 125 147 218 275 324 389 456
+
+For this execution, Merge Sort required 3 passes and 17
+recorded comparisons, while Quick Sort required 6 partitions
+and 27 recorded comparisons.
+
+For large datasets where predictable worst-case performance
+is important, Merge Sort can be justified because its worst-case
+time complexity is O(n log n). Quick Sort can use less auxiliary
+array memory, but its worst-case time complexity is O(n^2)
+when partitions become highly unbalanced.

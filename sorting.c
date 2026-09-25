@@ -13,12 +13,11 @@ void display(int a[], int n)
 }
 
 
-/* ================= MERGE SORT ================= */
 
 int mergeComparisons = 0;
 int pass = 1;
 
-/* Merge two parts */
+
 void merge(int a[], int low, int mid, int high)
 {
     int temp[20];
@@ -102,12 +101,10 @@ void mergeSort(int a[], int n)
 }
 
 
-/* ================= QUICK SORT ================= */
-
 int quickComparisons = 0;
 int partitionNumber = 1;
 
-/* Partition */
+
 int partition(int a[], int low, int high)
 {
     int pivot;
@@ -180,8 +177,6 @@ void quickSort(int a[], int low, int high)
     }
 }
 
-
-/* ================= MAIN ================= */
 
 int main()
 {
